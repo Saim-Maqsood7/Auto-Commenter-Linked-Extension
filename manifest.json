@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "LinkedIn Auto Commenter",
+  "version": "1.0",
+  "description": "Automated commenting on LinkedIn posts using Google Gemini AI.",
+  "action": {
+      "default_popup": "popup.html"
+  },
+  "permissions": [
+      "activeTab",
+      "scripting",
+      "tabs",
+      "storage"
+  ],
+  "background": {
+      "service_worker": "background.js"
+  },
+  "content_scripts": [
+      {
+          "matches": ["*://www.linkedin.com/*"],
+          "js": ["contentscript.js"]
+      }
+  ],
+  "host_permissions": [
+      "*://www.linkedin.com/*"
+  ]
+}

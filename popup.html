@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LinkedIn Auto Commenter</title>
+    <style>
+        body {
+            width: 300px;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+        }
+        #description {
+            margin-top: 10px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            min-height: 50px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #0073b1;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #005582;
+        }
+        #log {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #555;
+            max-height: 100px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <h2>LinkedIn Auto Commenter</h2>
+    
+    <!-- Input field for the post URL -->
+    <input style="width: 97%;" type="text" id="postUrl" placeholder="Enter LinkedIn post URL" />
+    <button id="redirectBtn">Go to Post</button>
+
+    <!-- Fetch description button remains as it is -->
+    <button id="fetchBtn">Fetch Post Description</button>
+
+    <div id="description">Description will appear here</div>
+    <button id="autoCommentBtn">Auto Comment</button>
+    <div id="log"></div>
+    
+    <!-- Load the script as a module -->
+    <script type="module" src="popup.js"></script>
+</body>
+</html>
